@@ -7,11 +7,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SeeMessReviews {
+public class LoginMess {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		Scanner s = new Scanner(System.in);
 		System.out.println("Enter username : ");
 		String username = s.nextLine();
@@ -23,6 +23,8 @@ public class SeeMessReviews {
 		WebDriver driver = new ChromeDriver();
 
 		driver.manage().window().maximize();
+
+	
 
 		driver.manage().timeouts().pageLoadTimeout(15,TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
@@ -38,10 +40,11 @@ public class SeeMessReviews {
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/form/button")).submit();
-		
-		driver.findElement(By.xpath("//button[@id='reviews']")).click();
-		
-		System.out.println("Navigated to mess reviews page successfully");
+		System.out.println("Login Successfully");
 	}
+
 }
+
+
+
 //testmess123@gmail.com        TestUser@11
